@@ -106,7 +106,7 @@ MODIFY COLUMN cvv INT;
 CREATE VIEW InformeTecnico AS
 SELECT t.id, u.name, u.surname, cc.iban, c.company_name
 FROM transaction t
-JOIN user u ON t.user_id = u.id
+JOIN data_user u ON t.user_id = u.id
 JOIN credit_card cc ON t.credit_card_id = cc.id
 JOIN company c ON t.company_id = c.id
 ORDER BY t.id DESC;
